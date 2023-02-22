@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+
+<button onclick="GFG_Fun('Parameter'); ">
+  vacation
+</button>
+<p id="GFG_DOWN"
+   style="color: green;
+			font-size: 24px;
+			font-weight: bold;">
+</p>
+<script>
+  var up =
+    document.getElementById('GFG_UP');
+  var down =
+    document.getElementById('GFG_DOWN');
+  up.innerHTML =
+    'Click on button to pass the '+
+    'string parameter to the function';
+
+  function GFG_Fun(parameter) {
+    down.innerHTML = "String '"
+      + parameter + "' Received";
+  }
+</script>
+</body>
+
+</html>

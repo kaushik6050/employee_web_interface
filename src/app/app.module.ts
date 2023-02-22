@@ -8,12 +8,14 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {EmployeeService} from "./service/employee.service";
 import { VacationComponent } from './employee-list/vacation/vacation.component';
+import { WorkComponent } from './employee-list/work/work.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    VacationComponent
+    VacationComponent,
+    WorkComponent
   ],
 
   imports: [

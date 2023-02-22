@@ -3,26 +3,25 @@ import {Employee} from "../../model/employee";
 import {EmployeeService} from "../../service/employee.service";
 
 @Component({
-  selector: 'app-vacation',
-  templateUrl: './vacation.component.html',
-  styleUrls: ['./vacation.component.css']
+  selector: 'app-work',
+  templateUrl: './work.component.html',
+  styleUrls: ['./work.component.css']
 })
-export class VacationComponent {
+export class WorkComponent {
 
   employees: Employee[] | undefined;
   private employeeId: string | undefined;
-  private vacation: bigint | undefined;
+  private employeeWorkedDays: bigint | undefined;
 
 
   constructor(private employeeService: EmployeeService) {
   }
 
   ngOnInit() {
-    if (this.employeeId != null&& this.vacation!=null) {
-      this.employeeService.updateVacation(this.employeeId, this.vacation).subscribe(data => {
+    if (this.employeeId != null && this.employeeWorkedDays != null) {
+      this.employeeService.updateWork(this.employeeId, this.employeeWorkedDays).subscribe(data => {
 
       });
     }
-
   }
 }
